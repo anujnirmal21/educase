@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom";
 function SignUp() {
   const navigete = useNavigate();
 
-  const handleClick = () => navigete("/profile");
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigete("/profile");
+  };
+
   return (
     <>
       <div className="flex flex-col h-full gap-[31px] justify-start">
